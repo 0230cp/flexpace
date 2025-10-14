@@ -1,0 +1,54 @@
+{
+  "project_info": {
+    "project_number": "1032634745503",
+    "project_id": "flex-pace",
+    "storage_bucket": "flex-pace.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:1032634745503:android:5dc6f7c393eecd7e9298aa",
+        "android_client_info": {
+          "package_name": "com.flex.pace"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "1032634745503-eri752emte2mqo1voq8rqkaiqv3ls1ov.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.flex.pace",
+            "certificate_hash": "f1da96b0b1e1b1da8ac1e937650af08ebf94748c"
+          }
+        },
+        {
+          "client_id": "1032634745503-q7ct2ru3ljeln6f7946dmuuplu13ua1s.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyDubw-IdKggES41UYDB-oDDX0VVAbWeBgA"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "1032634745503-q7ct2ru3ljeln6f7946dmuuplu13ua1s.apps.googleusercontent.com",
+              "client_type": 3
+            },
+            {
+              "client_id": "1032634745503-advlu73pies6f2fc41p97c4vab8cc5rl.apps.googleusercontent.com",
+              "client_type": 2,
+              "ios_info": {
+                "bundle_id": "com.flex.pace"
+              }
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
