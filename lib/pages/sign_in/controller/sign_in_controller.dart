@@ -9,12 +9,14 @@ import 'package:flexpace/common/service/userdata_service.dart';
 import 'package:flexpace/pages/social_sign_up/controller/social_sign_up_controller.dart';
 import 'package:flutter/services.dart';
 import 'package:flutter_naver_login/flutter_naver_login.dart';
+import 'package:flutter_naver_login/interface/types/naver_login_result.dart';
 import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 import 'package:logger/logger.dart';
 import "package:kakao_flutter_sdk_user/kakao_flutter_sdk_user.dart"
     as KaKaoUser;
 import 'package:sign_in_with_apple/sign_in_with_apple.dart';
+import 'package:flutter_naver_login/flutter_naver_login.dart';
 
 class SignInController extends GetxController {
   String socialKey = '';
@@ -125,16 +127,14 @@ class SignInController extends GetxController {
   routingKey(int index) async {
     try {
       switch (index) {
-        case 0:
-          return await naverLogin();
 
-        case 1:
+        case 0:
           return await kakaoLogin();
 
-        case 2:
+        case 1:
           return await appleLogin();
 
-        case 3:
+        case 2:
           return await googleLogin();
 
         default:
@@ -201,19 +201,19 @@ class SignInController extends GetxController {
     }
   }
 
-  naverLogin() async {
-    await FlutterNaverLogin.logOutAndDeleteToken();
-
-    final NaverLoginResult result = await FlutterNaverLogin.logIn();
-    NaverAccessToken res = await FlutterNaverLogin.currentAccessToken;
-
-    socialKey = '네이버';
-    socialId = result.account.id.toString();
-    socialEmail = result.account.email.toString();
-
-    print(socialId);
-    print(socialEmail);
-  }
+  // naverLogin() async {
+  //   await FlutterNaverLogin.logOutAndDeleteToken();
+  //
+  //   final NaverLoginResult result = await FlutterNaverLogin.logIn();
+  //   NaverAccessToken res = await FlutterNaverLogin.currentAccessToken;
+  //
+  //   socialKey = '네이버';
+  //   socialId = result.account.id.toString();
+  //   socialEmail = result.account.email.toString();
+  //
+  //   print(socialId);
+  //   print(socialEmail);
+  // }
 
   Future<void> googleLogin() async {
     try {
